@@ -5,6 +5,9 @@ plugins {
 }
 
 android {
+    buildFeatures {
+        viewBinding = true
+
     namespace = "com.example.healthapp"
     compileSdk = 35
 
@@ -41,7 +44,11 @@ android {
 }
 
 dependencies {
-
+    implementation ("androidx.activity:activity-compose:1.3.1")
+    implementation ("androidx.compose.material3:material3:1.0.0")
+    implementation ("androidx.compose.ui:ui:1.0.5")
+    implementation ("androidx.compose.runtime:runtime:1.0.5")
+    implementation("androidx.compose.material3:material3:1.1.2")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -60,4 +67,5 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-}
+
+}}

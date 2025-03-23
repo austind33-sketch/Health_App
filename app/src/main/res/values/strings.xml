@@ -91,4 +91,7 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="enter_your_meal">Enter your meal</string>
+    <string name="save_meal">Save Meal</string>
+    <string name="no_meals_recorded_yet">No meals recorded yet</string>
 </resources>

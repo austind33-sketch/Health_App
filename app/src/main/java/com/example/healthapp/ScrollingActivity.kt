@@ -3,6 +3,7 @@ package com.example.healthapp
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.healthapp.databinding.ActivityScrollingBinding
+import androidx.core.content.edit
 
 class ScrollingActivity : AppCompatActivity() {
 
@@ -35,9 +36,9 @@ class ScrollingActivity : AppCompatActivity() {
         meals.add(meal)
 
         // Save to SharedPreferences
-        sharedPrefs.edit()
-            .putStringSet("mealList", meals)
-            .apply()
+        sharedPrefs.edit() {
+            putStringSet("mealList", meals)
+        }
 
         loadMeals()
     }
